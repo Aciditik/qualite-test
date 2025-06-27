@@ -1,1 +1,27 @@
-node_modules
+# Dépendances
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Répertoire de couverture
+coverage/
+.nyc_output/
+
+# Fichiers d'environnement
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers temporaires
+*.tmp
+*.swp
+*.swo

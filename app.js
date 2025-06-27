@@ -89,7 +89,7 @@ app.get('/convert-eur-to-usd', (req, res) => {
   const euros = parseFloat(req.query.eur)
 
   if (isNaN(euros) || euros < 0) {
-    return res.status(400).send('Montant invalide sale con met un nombre positif')
+    return res.status(400).send('Montant invalide: doit être un nombre positif')
   }
 
   const dollars = euros * exchangeRateEURtoUSD
@@ -100,7 +100,7 @@ app.get('/convert-usd-to-gbp', (req, res) => {
     const dollars = parseFloat(req.query.usd)
 
     if (isNaN(dollars) || dollars < 0) {
-        return res.status(400).send('Montant invalide: doit être un nombre positif')
+      return res.status(400).send('Montant invalide: doit être un nombre positif')
     }
 
     const pounds = dollars * exchangeRateUSDtoGBP
