@@ -1,0 +1,26 @@
+{
+  "name": "conversion",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node run-tests.js",
+    "test:ci": "npm run test:unit && npm run test:functional && npm run test:e2e",
+    "test:unit": "c8 --reporter=text --reporter=json-summary --reporter=lcov mocha test/unit/**/*.test.js",
+    "test:functional": "c8 --reporter=text --reporter=json-summary --reporter=lcov mocha test/functional/**/*.test.js",
+    "test:e2e": "c8 --reporter=text --reporter=json-summary --reporter=lcov mocha test/e2e/**/*.test.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "c8": "^10.1.3",
+    "chai": "^5.2.0",
+    "mocha": "^11.7.1",
+    "puppeteer": "^24.11.0"
+  }
+}
